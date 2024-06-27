@@ -20,5 +20,7 @@ from register.views import register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('new_register/', register),
+    path('register/', register),
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/', include('rest_api.urls', namespace='api'))
 ]
